@@ -10,5 +10,6 @@ public class TestClient {
 		DockerClient dockerClient = DockerClientBuilder.getInstance("tcp://localhost:2375").build();
 		Info info = dockerClient.infoCmd().exec();
 		System.out.print(info);
+		System.out.println("Hello docker!");
 	}
 }
