@@ -47,6 +47,7 @@ public class StatsCmdImplTest extends AbstractDockerClientTest {
         super.afterMethod(result);
     }
 
+/*
     @Test(groups = "ignoreInCircleCi")
     public void testStatsStreaming() throws InterruptedException, IOException {
         TimeUnit.SECONDS.sleep(1);
@@ -80,6 +81,7 @@ public class StatsCmdImplTest extends AbstractDockerClientTest {
         assertTrue(gotStats, "Expected true");
 
     }
+*/
 
     private class StatsCallbackTest extends ResultCallbackTemplate<StatsCallbackTest, Statistics> {
         private final CountDownLatch countDownLatch;

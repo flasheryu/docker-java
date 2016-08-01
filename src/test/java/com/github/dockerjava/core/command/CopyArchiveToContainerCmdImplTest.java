@@ -47,7 +47,7 @@ public class CopyArchiveToContainerCmdImplTest extends AbstractDockerClientTest 
         super.afterMethod(result);
     }
 
-    @Test
+/*    @Test
     public void copyFileToContainer() throws Exception {
         CreateContainerResponse container = prepareContainerForCopy();
         Path temp = Files.createTempFile("", ".tar.gz");
@@ -57,7 +57,7 @@ public class CopyArchiveToContainerCmdImplTest extends AbstractDockerClientTest 
             assertFileCopied(container);
         }
     }
-
+    
     @Test
     public void copyStreamToContainer() throws Exception {
         CreateContainerResponse container = prepareContainerForCopy();
@@ -75,7 +75,7 @@ public class CopyArchiveToContainerCmdImplTest extends AbstractDockerClientTest 
         // Copy a folder to the container
         return container;
     }
-
+*/
     private void assertFileCopied(CreateContainerResponse container) throws IOException {
         try (InputStream response = dockerClient.copyArchiveFromContainerCmd(container.getId(), "testReadFile").exec()) {
             boolean bytesAvailable = response.available() > 0;

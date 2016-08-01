@@ -77,7 +77,7 @@ public class AttachContainerCmdExecTest extends AbstractNettyDockerClientTest {
         assertThat(callback.toString(), containsString(snippet));
     }
 
-    @Test
+/*    @Test
     public void attachContainerWithStdin() throws Exception {
 
         String snippet = "hello world";
@@ -120,7 +120,7 @@ public class AttachContainerCmdExecTest extends AbstractNettyDockerClientTest {
 
         assertThat(callback.toString(), containsString(snippet));
     }
-
+*/
     @Test
     public void attachContainerWithTTY() throws Exception {
 
